@@ -4,7 +4,7 @@ mintemp=49000                                  # fan shutoff temp in millidegree
 minpwm=50                                      # lowest desired pwm value
 temprange=$((71000 - $mintemp))                # max temp - min temp in millidegrees celcius
 pwmrange=$((255 - $minpwm))                    # max PMW - min PWM.  0 to 255
-cputherm=/sys/class/thermal/thermal_zone0/temp # thermometer readout
+cputherm=/sys/class/thermal/thermal_zone0/temp # thermometer readout  (le potato max is 70C)
 
 count=0
 while [ $count -lt 100 ]; do
