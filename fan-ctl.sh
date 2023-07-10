@@ -2,7 +2,7 @@
 
 mintemp=49000                                  # fan shutoff temp in millidegrees celcius
 minpwm=50                                      # lowest desired pwm value
-temprange=$((70000 - $mintemp))                # max temp - min temp in millidegrees celcius
+temprange=$((71000 - $mintemp))                # max temp - min temp in millidegrees celcius
 pwmrange=$((255 - $minpwm))                    # max PMW - min PWM.  0 to 255
 cputherm=/sys/class/thermal/thermal_zone0/temp # thermometer readout
 
