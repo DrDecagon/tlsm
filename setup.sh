@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "do not run as root"
+
 sudo apt update -y || exit -1
 sudo eatmydata apt upgrade -y || exit -1
 
@@ -11,5 +13,6 @@ sudo ldto merge pwm-a
 sudo ldto merge pwm-a-fan
 
 #installs custom supervisor script for running fan control on startup
-sed -i -e "s/pi/$HOMENAME/g" $HOMEDIR/tlsm/conf/supervisor/conf.d/pwmfan.conf
-sudo cp -r $HOMEDIR/tlsm/conf/supervisor/ /etc/
+SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
+sed -i -e "s/pi/$USER/g" $SCRIPT_DIR/conf/supervisor/conf.d/pwmfan.conf
+sudo cp -r $SCRIPT_DIR/conf/supervisor/ /etc/
