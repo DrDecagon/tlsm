@@ -1,6 +1,9 @@
 #!/bin/bash
 
-echo "do not run as root"
+if [ $(id -u) == 0 ]; then
+  echo "Do not run with sudo or as root"
+  exit 1
+fi
 
 sudo apt update -y || exit -1
 sudo eatmydata apt upgrade -y || exit -1
