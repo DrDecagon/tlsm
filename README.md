@@ -9,9 +9,7 @@ Fan-CTL & Fan-CTL-Alt
 --------------------------------------
 Two scripts for controling PWM output over pin 32 (PWM-E)
 
-The main option measure temperature and in millidegrees and converts that value linearly to a fan speed between 50 and 255 on the 8 bit PWM pin.  
-This is approximately 1v and 5v spread evenly between 49C and 71C.  1v is barely audable and with the CPU at full use the fan runs around 3v which is not obnoxious.  
-With a heatsink, This was much more than adequate to handle the AML-S905X-CC at constant full load in a warm room.
+The main option measures temperature and converts that value linearly to a fan speed between 50 and 255 on the 8 bit PWM pin.  This is approximately 1v and 5v spread evenly between 49C and 71C.  1v is barely audable and with the CPU at full use the fan runs around 3v which is not obnoxious.  With a heatsink, This was much more than adequate to handle the AML-S905X-CC at constant full load in a warm room.
 
 
 Fan Installation
