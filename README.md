@@ -16,9 +16,10 @@ With a heatsink, This was much more than adequate to handle the AML-S905X-CC at 
 
 Fan Installation
 --------------------------------------
-* Setup 4 pin fans as shown in the picture below. 
+* Connect 4 pin fans similar to the image below.  (make sure to move the blue wire to pin 32 or modify this script to pwm_f)
 * Run sudo ./setup.sh to configure and enable the GPIO pins and autostart fan-ctl-lin.sh at startup.
+For more info, see the [manufacturers instructions](https://hub.libre.computer/t/how-to-read-and-control-pwm-fan-speed-on-aml-s905x-cc/541)
 
 ![Reference pinout on pin 35](https://hub.libre.computer/uploads/db1613/original/2X/c/c8d7387f5f0af578b266ec8915fb52f3f289ced3.jpeg "Le Potato reference pinout")
 
-For more info, see the [manufacturers instructions](https://hub.libre.computer/t/how-to-read-and-control-pwm-fan-speed-on-aml-s905x-cc/541)
+
