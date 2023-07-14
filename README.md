@@ -14,7 +14,7 @@ The main option measures temperature and converts that value linearly to a fan s
 
 Fan Installation
 --------------------------------------
-* Connect 4 pin fans similar to the image below.  (make sure to move the blue wire to pin 32 or modify this script to pwm_f)
+* Connect 4 pin fans similar to the image below.  (make sure to move the blue wire to pin 32 or modify this script to pwm_a)
 * Run sudo ./setup.sh to configure and enable the GPIO pins and autostart fan-ctl.sh at startup.
 For more info, see the [manufacturers instructions](https://hub.libre.computer/t/how-to-read-and-control-pwm-fan-speed-on-aml-s905x-cc/541)
 
