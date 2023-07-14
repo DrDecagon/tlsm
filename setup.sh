@@ -9,11 +9,11 @@ sudo apt update -y || exit -1
 sudo eatmydata apt upgrade -y || exit -1
 
 # create pwm profile on GPIO pin 33 (might not be necissary)
-sudo ldto enable pwm-a
-sudo ldto enable pwm-a-fan
+sudo ldto enable pwm-e
+sudo ldto enable pwm-e-fan
 # push pwm config to survive reboot
-sudo ldto merge pwm-a
-sudo ldto merge pwm-a-fan
+sudo ldto merge pwm-e
+sudo ldto merge pwm-e-fan
 
 #installs custom supervisor script for running fan control on startup
 SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
