@@ -17,7 +17,8 @@ sudo ldto merge pwm-e-fan
 
 #installs custom supervisor script for running fan control on startup
 SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
-sudo chmod +x $SCRIPT_DIR/fan-ctl.sh
+chmod +x $SCRIPT_DIR/fan-ctl.sh
+sudo cp -r $SCRIPT_DIR/fan-ctl.sh /usr/bin/
 sudo cp -r $SCRIPT_DIR/conf/systemd/ /etc/
 systemctl start tlsmFan.service
 systemctl enable tlsmFan.service
